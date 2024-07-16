@@ -25,7 +25,7 @@ const io = new Server(server, {
 
 
 
-//socket io connections
+//socket io connections routes
 var msga = ""
 io.on('connection', (client) => {
     console.log('a user connected to server : ', client.id);
