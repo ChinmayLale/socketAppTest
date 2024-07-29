@@ -94,6 +94,17 @@ io.on('connection', (client) => {
         client.to('chinmay').emit('user-msg',data);
     })
 
+    client.on('contact-me',(msg)=>{
+        initBot();
+        bot.sendMessage(YOUR_CHAT_ID, msg).then(() => {
+            console.log('Message sent to Telegram');
+        }).catch((error) => {
+            console.error('Error sending message to Telegram:', error);
+        });
+        gracefulShutdown();
+        
+    })
+
     client.on('chinmay-msg',(msg)=>{
         console.log("chinmay msg --> ",msg);
         client.to('chinmay').emit('chinmay-msg',msg);
