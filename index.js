@@ -126,6 +126,7 @@ app.get('/', (req, res) => {
 
 
 app.get('/refresh', (req, res) => {
+    console.log(`Request Recived For Refresh on ${Date.now().toLocaleString()}`);
     res.status(200).send("Refreshed")
 })
 
