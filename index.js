@@ -125,6 +125,11 @@ app.get('/', (req, res) => {
 
 
 
+app.get('/refresh', (req, res) => {
+    res.status(200).send("Refreshed")
+})
+
+
 
 
 
